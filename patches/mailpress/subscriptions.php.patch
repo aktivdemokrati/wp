@@ -1,0 +1,22 @@
+--- subscriptions.php.orig	2010-12-04 21:37:32.000000000 +0100
++++ subscriptions.php	2011-01-23 04:48:23.000000000 +0100
+@@ -65,6 +65,7 @@
+ 				<th scope="row"><?php _e('Newsletters', MP_TXTDOM); ?></th>
+ 				<td>
+ 					<?php echo $checklist_newsletters; ?>
++Månadsbrevet inkluderar alla veckobrev, osv.
+ 				</td>
+ 			</tr>
+ <?php endif; ?> 	
+@@ -90,4 +91,9 @@
+ 		</p>
+ <?php endif; ?> 
+ 	</form>
+-</div>
+\ Ingen nyrad vid filslut
++
++<p>Se också <a href="http://aktivdemokrati.se/forum/ucp.php?i=digests&mode=basics">dina e-postinställningar för forumet</a></p>
++
++	  <?php include ADHOMESYS.'/ad-prenumeration-help.php'; ?>
++
++</div>

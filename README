@@ -1,0 +1,61 @@
+Also changed
+../../languages/sv_SE.*
+
+Översättning görs med:
+msgfmt -o sv_SE.mo sv_SE.po
+
+Modifierade plugins:
+ * login-lockdown
+ * phpbb-single-sign-on
+ * like
+ * register-plus-redux
+ * mailpress
+   /mp-content/add-ons/MailPress_newsletter.php
+   /mp-content/add-ons/MailPress_comment.php
+ * wpcas-server
+
+
+=====================================
+
+jonas@hem:/var/www/wp-content/plugins/login-lockdown$ diff loginlockdown.php.orig loginlockdown.php
+352c352
+<                       return new WP_Error('incorrect_password', sprintf(__('<strong>ERROR</strong>: Incorrect password. <a href="%s" title="Password Lost and Found">Lost your password</a>?'), site_url('wp-login.php?action=lostpassword', 'login')));
+---
+>                       return new WP_Error('incorrect_password', sprintf(__('<strong>ERROR</strong>: The password you entered for the username <strong>%1$s</strong> is incorrect. <a href="%2$s" title="Password Lost and Found">Lost your password</a>?'), $username, site_url('wp-login.php?action=lostpassword', 'login')));
+
+=====================================
+
+jonas@hem:/var/www/forum$ diff common.php.wp-orig common.php
+62,63c62,63
+< //suprimme le conflit de $table_prefix
+< $include_common_contents = str_replace('$table_prefix', '$dbname.".".$table_prefix2', $include_common_contents);
+---
+> //suprimme le conflit de $table_prefix # No please
+> ////$include_common_contents = str_replace('$table_prefix', '$dbname.".".$table_prefix2', $include_common_contents);
+
+=====================================
+
+jonas@hem:/var/www.bak/wp-content/plugins/wpcas-server$ diff wpcas-server.php.orig wpcas-server.php
+4c4
+< Version: 1.0
+---
+> Version: 1.1
+82a83,84
+>               isset( $_GET['service'] ) && $service = sanitize_url( $_GET['service'] );
+> 
+84c86,91
+<                       die( auth_redirect() );
+---
+>                 {
+>                   if( $_GET['gateway'] && $service )
+>                     die( wp_redirect( $service ) );
+> 
+>                   die( auth_redirect() );
+>                 }
+91c98
+<               if( isset( $_GET['service'] ) && $service = sanitize_url( $_GET['service'] ))
+---
+>               if( $service )
+
+============================================
+

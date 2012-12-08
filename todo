@@ -1,0 +1,219 @@
+* http://yoast.com/articles/wordpress-seo/
+* Medlemskap och Prenumeration
+* E-postpåminnelser för nya inlägg
+* Lägg in citat
+* Lägg in FAQ
+* Lägg in länkar
+* Lägg in nyhetsbrev
+* Lägg in annat från wiki
+* Like på startsidan. Share på övriga
+* Återställ aktiv post efter slump-xitat på startsidan. Redigeralänken i sidslutet går fel!
+
+* Tillåt registrering med åäö etc. Istället för felmeddelande, föreslå ett användarnamn som är ledigt och med giltiga tecken.
+
+* Se till att man slipper logga in vid varje besök. Spara kakan. Speciellt i phpBB.
+
+
+---
+
+Plugins used
+
+Akismet *
+Breadcrumb NavXT
+Broken Link Checker *
+Contact Form 7 ?
+Excerpt Editor
+Excerpt Tools ?
+Like
+Login LockDown
+PHPBB Single Sign On
+Platinum SEO Pack ?
+Sociable ?
+Stop Spammer Registrations Plugin *
+Widget Logic
+WordPress.com Stats *
+WordTwit *
+WP-FB-AutoConnect
+WP-PageNavi
+WP IRC ?
+WP Super Cache *
+Yet Another Related Posts Plugin
+
+---
+
+categories:
+asides
+gallery
+
+
+---
+
+
+http://wordpress.org/extend/plugins/s2member/
+http://wordpress.org/extend/plugins/wp-recaptcha/
+http://wordpress.org/extend/plugins/qtranslate/
+
+http://wordpress.org/extend/plugins/gravajax-registration/
+http://wordpress.org/extend/plugins/registration-form-widget/
+http://wordpress.org/extend/plugins/registration-login/
+http://wordpress.org/extend/plugins/visitor-maps/ -- NO MAPS SHOWING
+http://wordpress.org/extend/plugins/wpvn-username-changer/
+
+http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/
+http://wordpress.org/extend/plugins/subscribe-here-widget/
+http://wordpress.org/extend/plugins/subscribe2/
+
+http://wordpress.org/extend/plugins/facebook-members/
+http://wordpress.org/extend/plugins/relevanssi/
+http://wordpress.org/extend/plugins/search-meter/
+http://wordpress.org/extend/plugins/wordbooker/
+http://wordpress.org/extend/plugins/thumbnail-for-excerpts/
+http://wordpress.org/extend/plugins/excerpt-editor/
+http://wordpress.org/extend/plugins/sem-fancy-excerpt/
+http://wordpress.org/extend/plugins/events-calendar/
+
+
+
+
+
+
+
+--------------
+
+Look for more at http://wordpress.org/extend/plugins/browse/popular/page/9/
+
+WP-FB-AutoConnect
+/var/www/wp-content/plugins/wp-fb-autoconnect/_process_login.php
+Se rad 124 och 180. Behöver utöka eller importera BB-data.
+
+---
+
+
+Citat:
+
+<a href=""><img alt="" src="" title="" class="alignleft" width="80" height="80" /></a>
+
+<blockquote>
+</blockquote>
+
+
+-------
+
+CLOSE ACCOUNT
+
+Radio-knappar. Aktivt val expanderar ett kort tips på alternativ till
+att stänga kontot.
+
+
+ Why would you like to close your LinkedIn account?
+
+    * I have a duplicate account
+    * I am getting too many emails
+          o LinkedIn gives you the opportunity to manage your email notifications.
+    * I am not getting any value from my membership
+          o Increasing the size of your professional network on LinkedIn can help you get more value from the service. Build your professional network.
+    * I am using a different professional networking service
+    * Other
+
+
+-------
+
+TESTS
+ta1 a1@para.se iiwein1U
+ta2 a2@para.se oJuayo4B
+ta3 a3@para.se ahR9Yah1
+ra4 a4@para.se Ailoh5go
+ta5 a5@para.se cov7Ajie
+ta6 a6@para.se iG3oGequ
+
+--------------
+
+FB-plugins
+
+open-graph-protocol-tools : !FBML OG dynamic image
+like : FBML OG static
+
+
+--------------
+Denis Nordmann 2003 http://nordmann.ch
+Glarner-Landsgemeinde
+28595_5036.jpg
+http://www.sxc.hu/photo/28595
+
+
+D M www.marketingrepublic.co.uk 2005 
+diital touch
+310257_4608.jpg
+http://www.sxc.hu/photo/310257
+
+
+Nelson Syozi 2005
+http://www.sxc.hu/photo/234090
+234090_2125.jpg
+Pistol
+
+Satendra Mhatre 2007
+http://www.sxc.hu/photo/890370
+Boxes
+
+Julia Freeman-Woolpert 2007
+Linked hands
+http://www.sxc.hu/photo/925147
+
+Stephen Eastop 2007 
+Connecting
+http://www.sxc.hu/photo/889293
+889293_91098502.jpg
+
+Bev Lloyd-Roberts 2009 
+Boys in the Snow
+http://www.sxc.hu/photo/1144567
+1144567_35081389.jpg
+
+clix 2008 http://www.rodolfoclix.com.br/2000info.html
+http://www.sxc.hu/photo/1106018
+Network
+1106018_45282440.jpg
+
+clix 2008 http://www.rodolfoclix.com.br/2000info.html
+http://www.sxc.hu/photo/995748
+Network
+
+shazbot music 2008
+http://www.flickr.com/photos/kraniac/2490857741/
+2490857741_d59f48c18f_b.jpg
+http://creativecommons.org/licenses/by-nc-nd/2.0/
+
+le Minh Thanh 2009
+http://picasaweb.google.com/lh/photo/8rohgwTJJ-enmDE6MHWEqw
+http://creativecommons.org/licenses/by-nc-nd/3.0/
+3D Character (3).jpg
+
+
+David Masters 2009
+http://www.flickr.com/photos/davidmasters/3343605893/#/
+http://creativecommons.org/licenses/by/2.0/
+3343605893_5e68e727eb_b.jpg
+
+the waving cat 2009
+http://www.flickr.com/photos/thewavingcat/3720041941/
+http://creativecommons.org/licenses/by-nc-sa/2.0/
+3720041941_8f7c684e2e_b.jpg
+
+2005 Nara Vieira da Silva Osga
+dark madness
+http://www.sxc.hu/photo/328958
+328958_7860.jpg
+
+
+http://i.creativecommons.org/l/
+http://creativecommons.org/licenses/by-nc-nd/2.0/
+http://creativecommons.org/licenses/by-nc-nd/3.0/
+http://creativecommons.org/licenses/by/2.0/
+
+CAPTION
+<a href='http://creativecommons.org/licenses/by-nc-sa/2.0/' title='Creative Commons: Attribution-NonCommercial-ShareAlike 2.0'>©</a> <a href=''></a>
+
+
+Search for teamwork!
+-----------------------

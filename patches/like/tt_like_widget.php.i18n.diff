@@ -1,0 +1,72 @@
+--- tt_like_widget.php.1.9.6.1	2010-12-01 04:38:26.000000000 +0100
++++ tt_like_widget.php.1.9.6.2	2010-12-01 04:33:38.000000000 +0100
+@@ -3,7 +3,7 @@
+ * Plugin Name: Like
+ * Plugin URI: http://blog.bottomlessinc.com
+ * Description: Let your readers quickly share your content on Facebook with a simple click. The Like button is the new Facebook sharing button released on Apr. 21st 2010
+-* Version: 1.9.6
++* Version: 1.9.6.2
+ *
+ * Author: Bottomless
+ * Author URI: http://blog.bottomlessinc.com
+@@ -98,6 +98,7 @@
+     register_setting('tt_like', 'tt_like_font');
+     register_setting('tt_like', 'tt_like_align');
+     register_setting('tt_like', 'tt_like_showfaces');
++    register_setting('tt_like', 'tt_like_language');
+     register_setting('tt_like', 'tt_like_show_at_top');
+     register_setting('tt_like', 'tt_like_show_at_bottom');
+     register_setting('tt_like', 'tt_like_show_on_page');
+@@ -157,6 +158,7 @@
+     add_option('tt_like_colorscheme', 'light');
+     add_option('tt_like_align', 'left');
+     add_option('tt_like_showfaces', 'false');
++    add_option('tt_like_language', 'en_US');
+     add_option('tt_like_show_at_top', 'true');
+     add_option('tt_like_show_at_bottom', 'true');
+     add_option('tt_like_show_on_page', 'true');
+@@ -198,6 +200,7 @@
+     $tt_like_settings['colorscheme'] = get_option('tt_like_colorscheme');
+     $tt_like_settings['align'] = get_option('tt_like_align');
+     $tt_like_settings['showfaces'] = get_option('tt_like_showfaces') === 'true';
++    $tt_like_settings['language'] = get_option('tt_like_language');
+     $tt_like_settings['showattop'] = get_option('tt_like_show_at_top') === 'true';
+     $tt_like_settings['showatbottom'] = get_option('tt_like_show_at_bottom') === 'true';
+     $tt_like_settings['showonpage'] = get_option('tt_like_show_on_page') === 'true';
+@@ -308,6 +311,7 @@
+ function tt_like_widget_footer()
+ {
+     global $tt_like_settings;
++    $lang = $tt_like_settings['language'];
+ 
+     if($tt_like_settings['xfbml']=='true') {
+ 	$appids = trim($tt_like_settings['facebook_app_id']);
+@@ -334,7 +338,7 @@
+   (function() {
+     var e = document.createElement('script'); e.async = true;
+     e.src = document.location.protocol +
+-      '//connect.facebook.net/en_US/all.js';
++      '//connect.facebook.net/$lang/all.js';
+     document.getElementById('fb-root').appendChild(e);
+   }());
+ </script>
+@@ -343,7 +347,7 @@
+ 
+ echo <<<END
+ <div id="fb-root"></div>
+-<script src="http://connect.facebook.net/en_US/all.js"></script>
++<script src="http://connect.facebook.net/$lang/all.js"></script>
+ <script>
+   window.fbAsyncInit = function() {
+     FB.init({appId: '$appid', status: true, cookie: true, xfbml: true});
+@@ -530,6 +534,10 @@
+             <td><input type="checkbox" name="tt_like_showfaces" value="true" <?php echo (get_option('tt_like_showfaces') == 'true' ? 'checked' : ''); ?>/> <small><?php _e("Don't forget to increase the Height accordingly", 'tt_like_trans_domain' ); ?></small></td>
+         </tr>
+         <tr valign="top">
++            <th scope="row"><?php _e("Language:", 'tt_like_trans_domain' ); ?></th>
++            <td><input type="text" name="tt_like_language" value="<?php echo get_option('tt_like_language'); ?>" /></td>
++        </tr>
++        <tr valign="top">
+             <th scope="row"><h3><?php _e("Position", 'tt_like_trans_domain' ); ?></h3></th>
+ 	</tr>
+         <tr>

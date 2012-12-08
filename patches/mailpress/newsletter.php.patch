@@ -1,0 +1,26 @@
+--- MailPress_newsletter.php.orig	2010-12-04 21:37:32.000000000 +0100
++++ MailPress_newsletter.php	2010-12-12 07:49:35.000000000 +0100
+@@ -115,6 +115,23 @@
+ 		global $mp_registered_newsletters;
+ 		$nls = MP_Newsletters::get_active();
+ 
++	        ///###### Modified by jonas@aktivdemokrati.se 2010-12-12
++		global $default_newsletter_order;
++		$default_newsletter_order = array(
++						  'new_post' => 1,
++						  'daily'    => 2,
++						  'weekly'   => 3,
++						  'monthly'  => 4,
++						  );
++		function default_newsletter_order_cmp($a,$b)
++		{
++		  global $default_newsletter_order;
++		  if( $default_newsletter_order[$a] > $default_newsletter_order[$b] ) return 1;
++		  return -1;
++		}
++		uksort($nls,'default_newsletter_order_cmp');
++		///############################################################
++
+ 		foreach ($nls as $k => $v)
+ 		{
+ 			if ($mp_registered_newsletters[$k]['descriptions'][$lib_nl])

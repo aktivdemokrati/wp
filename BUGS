@@ -1,0 +1,1 @@
+När en bild flyttas i WYSIWYG-editorn i WP, exempelvis till ett annat tabell-element, ändras sökvägen till bilden till en relativ sökväg som inte längre fungerar, om sökvägen inte från början var absolut inkl domän.

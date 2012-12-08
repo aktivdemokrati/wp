@@ -1,0 +1,10 @@
+/* =Login
+** ... Should be used in stead of inline for plugin register-plus-redux
+** @import url("/wp-content/themes/ad-1/style-login.css");
+-------------------------------------------------------------- */
+@import url("http://aktivdemokrati.se/wp-admin/css/colors-fresh.css");
+
+#header-logo
+{ 
+  background:url("images/favicon16.png") no-repeat scroll center center transparent;
+  }
