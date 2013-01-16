@@ -566,7 +566,8 @@ function ad_sociable_html()
   $excerpt	= urlencode($excerpt_in);
   $excerpt	= str_replace('+','%20',$excerpt);
 
-  $permalink 	= urlencode(get_permalink($post->ID));
+  //  $permalink 	= urlencode(get_permalink($post->ID));
+  $permalink 	= get_permalink($post->ID);
   $shortlink    = urlencode(wp_get_shortlink());
   $title_in = $post->post_title;
   if(!$title_in) $title_in = $blogname;
