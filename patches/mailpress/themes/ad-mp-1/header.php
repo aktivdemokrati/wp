@@ -10,7 +10,7 @@
 		<div <?php $this->classes('body'); ?>>
 <table <?php $this->classes('nopmb wrapper'); ?>>
 <tr><td valign="top">
-<a href="<?php bloginfo( 'url' ) ?>/"><img alt="Hem" src="http://aktivdemokrati.se/wp-content/themes/ad-1/images/logga-85x85.jpg" <?php $this->classes('ad-logo'); ?>></a>
+<a href="<?php bloginfo( 'url' ) ?>/"><img alt="Hem" src="http://aktivdemokrati.se/wp-content/themes/ad-2/images/logga-85x85.jpg" <?php $this->classes('ad-logo'); ?>></a>
 </td><td>
 <?php if (isset($this->args->viewhtml)) { ?>
 				<div <?php $this->classes('mail_link'); ?>>

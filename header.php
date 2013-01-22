@@ -162,9 +162,7 @@ endif;
 			</div><!-- #branding -->
 
 			<div id="access" role="navigation">
-<!--img id="ad-menu-bg" alt="" src="<?php echo(ADHOMEURL) ?>/images/menu/border.png"-->
 <div id="ad-menu-bg"></div>
-<!--img id="ad-menu-bg" alt="" src="/wp-content/themes/ad-1/images/menu/border.png"-->
 
 <div class="menu-header">
 <ul id="menu-huvud_meny" class="menu">

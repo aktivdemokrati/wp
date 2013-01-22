@@ -1,11 +1,11 @@
 /* =Login
 ** ... Should be used in stead of inline for plugin register-plus-redux
-** @import url("/wp-content/themes/ad-1/style-login.css");
+** @import url("/wp-content/themes/ad-2/style-login.css");
 -------------------------------------------------------------- */
 
 #login h1 a 
 {
-  background-image: url("/wp-content/themes/ad-1/images/aktivdemokrati.png");
+  background-image: url("images/aktivdemokrati.png");
   background-size: 310px 86px;
   margin: 0;
   padding: 0 0 10px;

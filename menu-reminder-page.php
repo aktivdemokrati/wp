@@ -8,7 +8,7 @@ Template Name: Menu reminder
 get_header(); ?>
 
 <div id="container">
-<img src="http://aktivdemokrati.se/wp-content/themes/ad-1/images/se-menyn-anim.gif" alt="Hallå där!!! Se vår meny här till höger"
+<img src="<?php echo(ADHOMEURL) ?>/images/se-menyn-anim.gif" alt="Hallå där!!! Se vår meny här till höger"
 style="position:absolute;top:-10px">
 
 <div id="content" role="main">
