@@ -255,6 +255,7 @@ class AD_Widget_Random_Posts extends WP_Widget {
 		</div>
 		<?php echo $after_widget;
 		// Reset the global $the_post as this query will have stomped on it
+                $wp_query = $original_query;
 		wp_reset_postdata();
 
 		endif;

@@ -16,6 +16,10 @@ function ad_section()
   global $wp_query;
   $queried_object = $wp_query->get_queried_object();
   $queried_object_id = (int) $wp_query->queried_object_id;
+
+    if( $queried_object_id == 0 )
+      return; // Query not yet initiated
+
   $menu_item = '';
   //ad_log("QUERIED ITEM ". $queried_object_id);
   global $wp;
