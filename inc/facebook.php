@@ -155,7 +155,7 @@ function ad_fb_widget_header_meta()
 
   echo '<meta property="fb:admins" content="'.$fbid.'" />'."\n";
   echo '<meta property="fb:app_id" content="'.$fbappid.'" />'."\n";
-  echo '<meta property="fb:page_id" content="'.$fbpageid.'" />'."\n";
+  //  echo '<meta property="fb:page_id" content="'.$fbpageid.'" />'."\n";
 
   echo '<meta property="og:site_name" content="'.htmlspecialchars(get_bloginfo('name')).'" />'."\n";
 

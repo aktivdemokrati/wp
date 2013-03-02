@@ -218,7 +218,7 @@ function ad_redirect()
   //ad_log( "GOT ".$_SERVER['REQUEST_URI']);
 
   if( preg_match('#/senaste/([^/]+)/#', $_SERVER['REQUEST_URI'], $matches) )
-    {
+    { 
       //ad_log( "  FOUND '".$matches[1]."'");
       global $ad_menu_current;
       $ad_menu_current = "/senaste/".$matches[1]."/";
@@ -227,12 +227,18 @@ function ad_redirect()
 
       global $wp_query;
       $wp_query = new WP_Query(array('cat' => $category->term_id, 'showposts' => 1, 'nopaging' => 0, 'post_status' => 'publish', 'caller_get_posts' => 1));
-      //$wp_query->the_post();
       $posts = $wp_query->get_posts();
 
       $wp_query = new WP_Query( 'p='.$posts[0]->ID );
-      wp_reset_query();
+      //wp_reset_query(); // do NOT reset query
+
+      $requested_url  = is_ssl() ? 'https://' : 'http://';
+      $requested_url .= $_SERVER['HTTP_HOST'];
+      $redirect_url = $requested_url . '/?p=' . $posts[0]->ID .'&catname=' . $matches[1];
+      ad_log("Senaste redirecting to " . $redirect_url);
+      return($redirect_url);
     }
+  return;
 }
 
 
@@ -395,6 +401,8 @@ function ad_insert_rewrite_rules( $rules )
     $newrules = array();
     $newrules['lista/(\w*)$'] = 'index.php?pagename=lista&catname=$matches[1]';
     $newrules['senaste/(\w*)$'] = 'index.php?p=1&catname=$matches[1]';
+
+
 
 //    global $wp_rewrite;
 //    $latest_structure = $wp_rewrite->root . "latest/%category%";
